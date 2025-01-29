@@ -48,6 +48,11 @@ To exclude the endpoints:
 management.endpoints.web.exposure.exclude=health,info
 management.endpoints.web.exposure.exclude=*
 
-
 ## Spring boot security
 - add spring-boot-starter-security in pom.xml
+- After adding this as dependency and when u run project, it will print something like below in console:
+````
+Using generated security password: 40cb2419-707e-4563-b056-5b4bce4de7ba
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+````
+- So, use above password and username: user
