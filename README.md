@@ -44,3 +44,10 @@ Approach 2: Tell Maven about your needed dependencies and it will get it four yo
 To expose all endpoints like /beans, etc use this wildcard mentioned below in src/main/resources/application.properties file
 management.endpoints.web.exposure.include=*
 
+To exclude the endpoints:
+management.endpoints.web.exposure.exclude=health,info
+management.endpoints.web.exposure.exclude=*
+
+
+## Spring boot security
+- add spring-boot-starter-security in pom.xml
