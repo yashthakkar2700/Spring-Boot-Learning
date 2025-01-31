@@ -78,3 +78,9 @@ This generated password is for development use only. Your security configuration
   eg:
   java -jar firstapplication-0.0.1-SNAPSHOT.jar
  ````
+## Annotations
+
+#### @GetMapping("/")
+- used to define route/endpoint functions
+#### @value
+- used to get value from application.properties file
