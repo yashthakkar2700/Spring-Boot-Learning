@@ -56,3 +56,25 @@ Using generated security password: 40cb2419-707e-4563-b056-5b4bce4de7ba
 This generated password is for development use only. Your security configuration must be updated before running your application in production.
 ````
 - So, use above password and username: user
+
+## Running spring boot application from commandline
+### Two options:
+1. Use java -jar:
+    ````
+   java -jar myapp.jar
+   ````
+2. Using spring boot Maven plugin:
+   mvnw spring-boot: run
+   
+#### Steps:
+- Go to the prj directory
+- Type this command: 
+  mvnw package
+- Now:
+  cd target
+- Now:
+````
+ java -jar jarName.jar
+  eg:
+  java -jar firstapplication-0.0.1-SNAPSHOT.jar
+ ````
