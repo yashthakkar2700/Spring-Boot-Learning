@@ -78,9 +78,62 @@ This generated password is for development use only. Your security configuration
   eg:
   java -jar firstapplication-0.0.1-SNAPSHOT.jar
  ````
+
+## Application properties:
+### It is grouped in 8 categories: core, web, security, data,Actuator, Integration, DevTools, testing
+### Core:
+````
+# Log levels severity mapping
+logging.level.org.springframework=DEBUG
+logging.level.org.hibernate=TRACE
+logging.level.org.luv2code=INFO
+
+# Log file name
+logging.file.name=crazy-stuff.log
+logging.file.path=c:/myapps/demo
+
+````
+
+### Web:
+````
+#HTTP server port 
+server.port=7070
+
+# Context path of application
+server.servlet.context-path=/my-first-app
+
+# Default HTTP session time out
+server.servlet.session.timeout=15m
+````
+
+### Actuator
+````
+management.endpoints.web.exposure.include=*
+management.endpoints.web.exposure.include=health, info
+management.endpoints.web.exposure.exclude=health, info
+management.endpoints.web.base-path=/actuator
+````
+
+### Security
+````
+spring.security.user.name=admin
+spreing.security.password=yash1234
+````
+
+### Data
+````
+spring.datasource.url=jdbc:mysql://localhost:3306/ecommerce
+#username for DB
+spring.datasource.username=yash
+#password for DB
+spring.datasource.password=yash12345
+````
+
+
 ## Annotations
 
 #### @GetMapping("/")
 - used to define route/endpoint functions
 #### @value
 - used to get value from application.properties file
+
