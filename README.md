@@ -120,7 +120,7 @@ spring.security.user.name=admin
 spreing.security.password=yash1234
 ````
 
-### Data
+### Data 
 ````
 spring.datasource.url=jdbc:mysql://localhost:3306/ecommerce
 #username for DB
@@ -129,7 +129,6 @@ spring.datasource.username=yash
 spring.datasource.password=yash12345
 ````
 
-
 ## Annotations
 
 #### @GetMapping("/")
@@ -137,3 +136,16 @@ spring.datasource.password=yash12345
 #### @value
 - used to get value from application.properties file
 
+
+## Inversion Control
+Approach of outsourcing the construction and management of objects.
+#### Spring container (Spring object factory):
+- here spring container comes in place.
+- 2 primary functions:
+- First, Create and manage objects (Inversion of control)
+- Second, Inject object dependencies (Dependency Injection)
+
+#### Configuring spring container
+- XML configuration (legacy)
+- Java Annotations (modern)
+- Java source code (modern)
