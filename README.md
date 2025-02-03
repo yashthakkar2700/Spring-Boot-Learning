@@ -146,7 +146,33 @@ spring.datasource.password=yash12345
 
 #### @Autowired
 - It marks a Constructor, Setter method, Properties and Config() method as to be autowired that is ‘injecting beans'(Objects) at runtime by Spring Dependency Injection mechanism.
-- 
+
+#### @springBootApplication
+- It Enables Auto Configuration, Component Scanning, Additional Configuration.
+- It is composed of following annotations:
+  - @EnableAutoConfiguration
+  - @ComponentScan
+  - @Configuration
+- If we want to use packages outside our spring boot package then:
+````
+@SpringBootApplication(
+    scanBasePackages={"com.acme.cart",
+                      "com.cmu.srs"
+                      }
+)
+```` 
+
+#### @EnableAutoConfiguration
+- Enables Spring Boot's auto-configuration support.
+
+#### @ComponentScan
+- Enables component scanning of current package.
+- Also recursively scans sub-packages.
+
+#### @Configuration
+- Able to register extra beans with @Bean
+- or import other configuration classes.
+
 
 
 ## Inversion Control
@@ -170,4 +196,20 @@ Approach of outsourcing the construction and management of objects.
 - For dependency injection, spring uses autowiring.
 - Spring will look for a class that matches
 - matches by type: class or interface
-- Spring will inject automatically, hence it is autowired
+- Spring will inject automatically, hence it is autowired.
+
+## Component Scanning
+- By default, spring boot starts component scanning:
+  - From same package as your main spring boot application
+  - Also scans sub-packages recursively
+- This implicity defines a base search package:
+  - Allows default component scanning
+  - No need to explicity reference base package name
+- If we want to use packages outside our spring boot package then:
+````
+@SpringBootApplication(
+    scanBasePackages={"com.acme.cart",
+                      "com.cmu.srs"
+                      }
+)
+````

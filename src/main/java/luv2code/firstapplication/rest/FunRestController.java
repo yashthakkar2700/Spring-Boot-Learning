@@ -1,4 +1,4 @@
-package com.springapp.firstapplication.rest;
+package luv2code.firstapplication.rest;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;
