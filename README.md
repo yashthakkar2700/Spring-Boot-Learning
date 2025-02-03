@@ -136,12 +136,24 @@ spring.datasource.password=yash12345
 #### @value
 - used to get value from application.properties file
 
+#### @Component
+- it marks the class as a Spring Bean.
+- Spring Bean is just a regular Java class i.e. managed by Spring.
+- @Component also makes the bean available for dependency injection.
+
+#### @RestController
+- It tells the class that it is a rest controller class.
+
+#### @Autowired
+- It marks a Constructor, Setter method, Properties and Config() method as to be autowired that is ‘injecting beans'(Objects) at runtime by Spring Dependency Injection mechanism.
+- 
+
 
 ## Inversion Control
 Approach of outsourcing the construction and management of objects.
 #### Spring container (Spring object factory):
 - here spring container comes in place.
-- 2 primary functions:
+- 2 primary function s:
 - First, Create and manage objects (Inversion of control)
 - Second, Inject object dependencies (Dependency Injection)
 
@@ -149,3 +161,13 @@ Approach of outsourcing the construction and management of objects.
 - XML configuration (legacy)
 - Java Annotations (modern)
 - Java source code (modern)
+
+## Dependency Injection
+- Two types: 1) Constructor Injection 2) Setter Injection
+
+
+## Spring AutoWiring
+- For dependency injection, spring uses autowiring.
+- Spring will look for a class that matches
+- matches by type: class or interface
+- Spring will inject automatically, hence it is autowired
