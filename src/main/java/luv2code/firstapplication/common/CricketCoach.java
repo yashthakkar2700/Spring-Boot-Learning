@@ -1,4 +1,4 @@
-package luv2code.util;
+package luv2code.firstapplication.common;
 
 import org.springframework.stereotype.Component;
 

@@ -1,6 +1,6 @@
 package luv2code.firstapplication.rest;
 
-import luv2code.util.Coach;
+import luv2code.firstapplication.common.Coach;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
