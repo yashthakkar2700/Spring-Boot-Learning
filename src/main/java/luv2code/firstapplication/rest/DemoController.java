@@ -35,7 +35,7 @@ public class DemoController {
 
     // Qualifier example
     @Autowired
-    public DemoController(@Qualifier("trackCoach") Coach theCoach) {
+    public DemoController(Coach theCoach) {
         myCoach = theCoach;
     }
 

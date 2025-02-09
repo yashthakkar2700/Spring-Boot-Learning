@@ -188,6 +188,14 @@ spring.datasource.password=yash12345
     }
 ````
 
+#### @Primary
+- When there are multiplr implamentations of a interface (eg: Coach implented by cricketCoach, baseballCoach, etc).
+But with Qualifier we manually defined and called the specific Coach.
+- With the Help of @Primary we can define Primary to any of the Coach and that will be called byDefault when we don't use Qualifier.  
+- We can mark *only one* class to @Primary when there are multiple implementations for that.
+- @qualifier has *HIGHER PRIORITY* than @Primary.
+- When using both together, @Qualifier will override @primary defualt class.
+
 
 ## Inversion Control
 Approach of outsourcing the construction and management of objects.
