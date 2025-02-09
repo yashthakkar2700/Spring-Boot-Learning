@@ -173,6 +173,20 @@ spring.datasource.password=yash12345
 - Able to register extra beans with @Bean
 - or import other configuration classes.
 
+#### @Qualifier
+- Example:
+  - Suppose we are having coach Interface i.e. implemented to CricketCoach class, BaseBall class and TennisCoach class.
+  - And we have used @AutoWired. Then it will give error since there will be ambiguity that which coach we are referring to while autowiring.
+  - So here, @Quantifier comes into the picture!
+  - It is used in both constructor and setter injection.
+- Usage: 
+````
+// Here class name is TrackCoach, but in Qualifier u have to write 'trackCoach' (start from lowercase)
+@Autowired
+    public DemoController(@Qualifier("trackCoach") Coach theCoach) {
+        myCoach = theCoach;
+    }
+````
 
 
 ## Inversion Control
@@ -189,9 +203,13 @@ Approach of outsourcing the construction and management of objects.
 - Java source code (modern)
 
 ## Dependency Injection
-- Two types: 1) Constructor Injection 2) Setter Injection
-
-
+- Two types: 1) Constructor Injection (Best approach) 2) Setter Injection
+- One more type of injection is which is not recommended by Spring.io dev team i.e.:
+  - Field Injection
+  - It makes code harder to unit test
+  -  Field Injection inject dependencies by setting field values on your class directly, even private fields.
+  - Accomplished by using 'Java Reflection'.
+  - In this, there is no need for constructors or setters.
 ## Spring AutoWiring
 - For dependency injection, spring uses autowiring.
 - Spring will look for a class that matches
@@ -213,3 +231,5 @@ Approach of outsourcing the construction and management of objects.
                       }
 )
 ````
+
+
