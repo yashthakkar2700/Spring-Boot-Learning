@@ -196,6 +196,8 @@ But with Qualifier we manually defined and called the specific Coach.
 - @qualifier has *HIGHER PRIORITY* than @Primary.
 - When using both together, @Qualifier will override @primary defualt class.
 
+#### @Lazy
+
 
 ## Inversion Control
 Approach of outsourcing the construction and management of objects.
