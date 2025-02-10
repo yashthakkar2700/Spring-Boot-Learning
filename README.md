@@ -253,7 +253,3 @@ Approach of outsourcing the construction and management of objects.
                       }
 )
 ````
-
-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
-
-
