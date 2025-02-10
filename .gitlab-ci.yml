@@ -7,7 +7,8 @@ deploy:
     - git remote add github https://github.com/yashthakkar2700/Spring-Boot-Learning
     - git config user.name "yashthakkar2700"
     - git config user.email "yashthakkar2700@gmail.com"
+    - git checkout -b master  # Explicitly create the 'master' branch if needed
     - git fetch github
-    - git push github master  # Push to GitHub (adjust the branch name if needed)
+    - git push github master  # Make sure you're pushing to the correct branch
   only:
-    - master  # Only run on the main branch (or use your preferred branch)
+    - master  # Trigger only when pushing to 'master' branch
