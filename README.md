@@ -189,7 +189,7 @@ spring.datasource.password=yash12345
 ````
 
 #### @Primary
-- When there are multiplr implamentations of a interface (eg: Coach implented by cricketCoach, baseballCoach, etc).
+- When there are Multiple implementations of a interface (eg: Coach implented by cricketCoach, baseballCoach, etc).
 But with Qualifier we manually defined and called the specific Coach.
 - With the Help of @Primary we can define Primary to any of the Coach and that will be called byDefault when we don't use Qualifier.  
 - We can mark *only one* class to @Primary when there are multiple implementations for that.
@@ -197,7 +197,19 @@ But with Qualifier we manually defined and called the specific Coach.
 - When using both together, @Qualifier will override @primary defualt class.
 
 #### @Lazy
-
+- When Spring application staSrts, it creates all the instances of beans and make them available.
+- So, instead of intializing all beans at the start of application, we can use lazy for:
+  - Initializing when needed for dependency injection
+  - or explicitly requested
+- Setting Lazy initialization globally in project:
+  - In application.properties
+  - spring.main.lazy-initialization=true
+  - Here, all beans are created until needed, including DemoController
+- Example flow:
+  - When we access REST endpoint /dailyWorkout endpoint.
+  - Spring will determine dependencies for DemoController
+  - For dependency resolution Spring creates instance of CricketCoach First.
+  - Then creates instance of DemoController and Injects CricketCoach
 
 ## Inversion Control
 Approach of outsourcing the construction and management of objects.
@@ -241,5 +253,5 @@ Approach of outsourcing the construction and management of objects.
                       }
 )
 ````
-
+####
 
