@@ -196,6 +196,20 @@ But with Qualifier we manually defined and called the specific Coach.
 - @qualifier has *HIGHER PRIORITY* than @Primary.
 - When using both together, @Qualifier will override @primary defualt class.
 
+#### @Lazy
+- When Spring application starts, it creates all the instances of beans and make them available.
+- So, instead of intializing all beans at the start of application, we can use lazy for:
+  - Initializing when needed for dependency injection
+  - or explicitly requested
+- Setting Lazy initialization globally in project:
+  - In application.properties
+  - spring.main.lazy-initialization=true
+  - Here, all beans are created until needed, including DemoController
+- Example flow:
+  - When we access REST endpoint /dailyWorkout endpoint.
+  - Spring will determine dependencies for DemoController
+  - For dependency resolution Spring creates instance of CricketCoach First.
+  - Then creates instance of DemoController and Injects CricketCoach
 
 ## Inversion Control
 Approach of outsourcing the construction and management of objects.
