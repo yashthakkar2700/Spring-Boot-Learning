@@ -10,4 +10,4 @@ deploy:
     - git fetch github
     - git push github master  # Push to GitHub (adjust the branch name if needed)
   only:
-    - master  # Only run on the main branch (or use your preferred branch)
+    - master  # Only run on the main branch (or use your preferred branch) 
